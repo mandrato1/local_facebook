@@ -169,11 +169,7 @@ if ($userfacebookinfo != false) {
 	// Define the modal
 	echo "<div class='modal fade' id='modal' tabindex='-1' role='dialog' aria-labelledby='modal'>
 			<div class='modal-dialog' role='document'>
-				<div class='modal-content'>
-					<div class='modal-body' id='modal-body'></div>
-					<div class='modal-footer'>
-						<button type='button' class='btn btn-default' data-dismiss='modal' component='close-modal' modalid='modal'>Close</button>
-					</div>
+				<div class='modal-content' id='modal-content'>
 				</div>
 			</div>
 		</div>";
@@ -202,3 +198,4 @@ if ($userfacebookinfo != false) {
 	?>
 	<script type="text/javascript" src="js/onclick.js"></script>
 	<script type="text/javascript" src="js/search.js"></script>
+	<script type='text/javascript' src='js/modalclose.js'></script>

@@ -3,14 +3,15 @@ $('a').click(function () {
 
 	if ($(this).attr('component') == 'forum') {
 		discussionId = $(this).attr('discussionid');
+		moduleId = $(this).attr('moduleid');
 
 		jQuery.ajax({
-			url : 'https://webcursos-d.uai.cl/local/facebook/app/request.php?action=get_discussion&discussionid=' + discussionId,
+			url : 'https://webcursos-d.uai.cl/local/facebook/app/request.php?action=get_discussion&discussionid=' + discussionId + '&moduleid=' + moduleId,
 			async : true,
 			data : {},
 			success : function (response) {
-				$('#modal-body').empty();
-				$('#modal-body').append(response);
+				$('#modal-content').empty();
+				$('#modal-content').append(response);
 				$('#modal').modal();
 			}
 		});
@@ -29,6 +30,7 @@ $('a').click(function () {
 	}
 	
 	if(aclick == 'font-weight:bold'){
+		alert("me hiciste click y soy feo");
 		var coursename = $('#coursename');
 		var badgecourse = $("p:contains('"+coursename+"')").parent().find('.badge');
 		$(this).css('font-weight','normal');
